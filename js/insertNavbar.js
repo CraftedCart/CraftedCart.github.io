@@ -17,6 +17,7 @@ var nav = '\
 			<ul class="nav navbar-nav">\
 				<li><a href="index.html">Home<span class="sr-only"> (current)</span></a></li>\
 				<li><a href="GormanCal.html">Gormanian Calendar Converter</a></li>\
+				<li><a href="CountdownToChristmas.html">Countdown To Christmas</a></li>\
 			</ul>\
 		</div><!-- /.navbar-collapse -->\
 	</div><!-- /.container-fluid -->\
