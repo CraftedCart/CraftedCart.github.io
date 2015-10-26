@@ -3,6 +3,10 @@
 	color: #FAFAFA;
 }
 
+.jumbotron {
+	box-shadow: #212121 0 0 8px;
+}
+
 .grePanel {
 	padding-bottom: 12px;
 }
