@@ -68,7 +68,7 @@ function greToGor () {
 
 		$("#outDayOfYear").html(dayOfYear);
 		$("#outDay").html(gDay);
-		$("#outMonth").html(gMonth + " | " + gorMonths[gMonth - 1][0]);
+		$("#outMonth").html(gMonth + " (" + gorMonths[gMonth - 1][0] + ")");
 
 	} else {
 		$("#outDayOfYear").html("Huh?");
@@ -115,7 +115,7 @@ function gorToGre () {
 
 		$("#outDayOfYear").html(dayOfYear);
 		$("#outDay").html(gDay);
-		$("#outMonth").html(gMonth + " | " + greMonths[gMonth - 1][0]);
+		$("#outMonth").html(gMonth + " (" + greMonths[gMonth - 1][0] + ")");
 
 	} else {
 		$("#outDayOfYear").html("Huh?");
