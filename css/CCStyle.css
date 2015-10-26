@@ -1,0 +1,16 @@
+.gorCal-jumbotron, .home-jumbotron {
+	background-color: #2196F3;
+	color: #FAFAFA;
+}
+
+.grePanel {
+	padding-bottom: 12px;
+}
+
+.grePanel div {
+	margin-bottom: 12px;
+}
+
+.rSpacing {
+	margin-right: 12px;
+}
