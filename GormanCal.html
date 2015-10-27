@@ -19,82 +19,89 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="js/jquery-1.11.3.min.js"></script>
-		<script src="js/gorCalConvert.js"></script>
   </head>
   <body>
 
-    <div class="replaceNavbar"></div>
-    <script src="js/insertNavbar.js"></script>
+    <div class="m-scene" id="main">
+      <div class="replaceNavbar scene_element scene_element--fadeinright"></div>
+      <script src="js/insertNavbar.js"></script>
 
-		<div class="jumbotron gorCal-jumbotron">
-			<div class="container">
-      	<h1>Gormanian Calendar Converter</h1>
-				<h3>Convert between Gregorian and Gormanian</h3>
-			</div>
+      <div class="fluid-container scene_element scene_element--fadeinup">
+  		  <div class="jumbotron gorCal-jumbotron">
+			   <div class="container">
+      	   <h1>Gormanian Calendar Converter</h1>
+				    <h3>Convert between Gregorian and Gormanian</h3>
+			   </div>
+        </div>
+
+  		  <div class="fluid-container">
+			   <div class="container panel panel-default grePanel">
+				    <h2>Enter a Gregorian or Gormanian Date</h2>
+				    <p>For the Gormanian Intermission, set the month to 14 and the day to 1</p>
+				    <p>Leap years are not supported</p>
+				    <div class="input-group">
+					   <span class="input-group-addon" id="basic-addon1">Day</span>
+					   <input type="number" id="greDay" class="form-control" value="1" min="1" max="31">
+				    </div>
+				    <div class="input-group">
+					   <span class="input-group-addon" id="basic-addon1">Month</span>
+					   <input type="number" id="greMonth" class="form-control" value="1" min="1" max="14">
+				    </div>
+
+				    <button type="button" class="btn btn-default pull-right" onclick="greToGor()">Convert to Gormanian!</button>
+				    <button type="button" class="btn btn-default pull-right rSpacing" onclick="gorToGre()">Convert to Gregorian!</button>
+			   </div>
+  		  </div>
+
+			   <!-- Output -->
+			   <div class="container panel panel-default grePanel">
+				    <h2>Output</h2>
+				    <ul class="list-group">
+					   <li class="list-group-item">
+						    <span class="badge" id="outDayOfYear">-</span>
+						    Day of Year
+					   </li>
+					   <li class="list-group-item">
+						    <span class="badge" id="outDay">-</span>
+						    Day
+					   </li>
+					   <li class="list-group-item">
+						    <span class="badge" id="outMonth">-</span>
+						    Month
+					   </li>
+				    </ul>
+			   </div>
+
+			   <!-- About -->
+			   <div class="container panel panel-default grePanel">
+				  <h2>Gormanian, what's that?</h2>
+				  <p>I'm going to guess that you don't watch Dave Gorman Modern Life is Goodish then.
+					   The Gormanian calendar is a idea from series 3 episode 7 of the Goodish show.
+					   We know how many seconds are in a minute, how many minutes are in an hour,
+					   how many hours are in a day, how many days there are in a week,
+					   how many months there are in a year, but we don't know how many days or weeks there
+					   are in a month. It changes each month. The Gormanian calendar solves this issue by
+					   making each month 28 days long, as well as by adding another month and an intermission.
+					   This calendar also renames and moves some months. (OCTober is the 10th month, not the
+					   8th?)
+				  </p>
+			  </div>
+      </div>
+
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.smoothState.js"></script>
+      <script src="js/transitionPage.js"></script>
+
+      <script src="js/gorCalConvert.js"></script>
+      <script type="text/javascript">
+        var date = new Date();
+        console.log(date);
+        $("#greDay").val(date.getDate());
+        $("#greMonth").val(date.getMonth() + 1);
+        greToGor();
+      </script>
+
     </div>
-
-		<div class="fluid-container">
-			<div class="container panel panel-default grePanel">
-				<h2>Enter a Gregorian or Gormanian Date</h2>
-				<p>For the Gormanian Intermission, set the month to 14 and the day to 1</p>
-				<p>Leap years are not supported</p>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Day</span>
-					<input type="number" id="greDay" class="form-control" value="1" min="1" max="31">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Month</span>
-					<input type="number" id="greMonth" class="form-control" value="1" min="1" max="14">
-				</div>
-
-				<button type="button" class="btn btn-default pull-right" onclick="greToGor()">Convert to Gormanian!</button>
-				<button type="button" class="btn btn-default pull-right rSpacing" onclick="gorToGre()">Convert to Gregorian!</button>
-			</div>
-		</div>
-
-			<!-- Output -->
-			<div class="container panel panel-default grePanel">
-				<h2>Output</h2>
-				<ul class="list-group">
-					<li class="list-group-item">
-						<span class="badge" id="outDayOfYear">-</span>
-						Day of Year
-					</li>
-					<li class="list-group-item">
-						<span class="badge" id="outDay">-</span>
-						Day
-					</li>
-					<li class="list-group-item">
-						<span class="badge" id="outMonth">-</span>
-						Month
-					</li>
-				</ul>
-			</div>
-
-			<!-- About -->
-			<div class="container panel panel-default grePanel">
-				<h2>Gormanian, what's that?</h2>
-				<p>I'm going to guess that you don't watch Dave Gorman Modern Life is Goodish then.
-					The Gormanian calendar is a idea from series 3 episode 7 of the Goodish show.
-					We know how many seconds are in a minute, how many minutes are in an hour,
-					how many hours are in a day, how many days there are in a week,
-					how many months there are in a year, but we don't know how many days or weeks there
-					are in a month. It changes each month. The Gormanian calendar solves this issue by
-					making each month 28 days long, as well as by adding another month and an intermission.
-					This calendar also renames and moves some months. (OCTober is the 10th month, not the
-					8th?)
-				</p>
-			</div>
-
-			<script type="text/javascript">
-				var date = new Date();
-				console.log(date);
-				$("#greDay").val(date.getDate());
-				$("#greMonth").val(date.getMonth() + 1);
-				greToGor();
-			</script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

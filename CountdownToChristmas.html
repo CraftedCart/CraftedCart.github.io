@@ -22,51 +22,59 @@
   </head>
   <body>
 
-    <div class="replaceNavbar"></div>
-    <script src="js/insertNavbar.js"></script>
+    <div class="m-scene" id="main">
+      <div class="replaceNavbar  scene_element scene_element--fadeinright"></div>
+      <script src="js/insertNavbar.js"></script>
 
-    <div class="jumbotron home-jumbotron">
-      <div class="container">
-        <h1>Countdown to Christmas</h1>
+      <div class="fluid-container  scene_element scene_element--fadeinup">
+        <div class="jumbotron home-jumbotron">
+          <div class="container">
+            <h1>Countdown to Christmas</h1>
+          </div>
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <h1 id="countdownDays">-</h1>
+            <div class="progress">
+              <div class="progress-bar bg-green" id="countdownDaysProg" role="progressbar" style="width: 0%;">
+              </div>
+            </div>
+            <h2 id="countdownHours">-</h2>
+            <div class="progress">
+              <div class="progress-bar bg-green" id="countdownHoursProg" role="progressbar" style="width: 0%;">
+              </div>
+            </div>
+            <h2 id="countdownMinutes">-</h2>
+            <div class="progress">
+              <div class="progress-bar bg-green" id="countdownMinutesProg" role="progressbar" style="width: 0%;">
+              </div>
+            </div>
+            <h2 id="countdownSeconds">-</h2>
+            <div class="progress">
+              <div class="progress-bar bg-green" id="countdownSecondsProg" role="progressbar" style="width: 0%;">
+              </div>
+            </div>
+            <h2 id="countdownMilliseconds">-</h2>
+            <div class="progress">
+              <div class="progress-bar bg-green" id="countdownMillisecondsProg" role="progressbar" style="width: 0%; transition: 0s;">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.smoothState.js"></script>
+      <script src="js/transitionPage.js"></script>
+
+      <script src="js/countdown.js"></script>
+      <script type="text/javascript">
+        setInterval(function(){ updateCountdown() }, 10);
+      </script>
+
     </div>
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1 id="countdownDays">-</h1>
-        <div class="progress">
-          <div class="progress-bar bg-green" id="countdownDaysProg" role="progressbar" style="width: 0%;">
-          </div>
-        </div>
-        <h2 id="countdownHours">-</h2>
-        <div class="progress">
-          <div class="progress-bar bg-green" id="countdownHoursProg" role="progressbar" style="width: 0%;">
-          </div>
-        </div>
-        <h2 id="countdownMinutes">-</h2>
-        <div class="progress">
-          <div class="progress-bar bg-green" id="countdownMinutesProg" role="progressbar" style="width: 0%;">
-          </div>
-        </div>
-        <h2 id="countdownSeconds">-</h2>
-        <div class="progress">
-          <div class="progress-bar bg-green" id="countdownSecondsProg" role="progressbar" style="width: 0%;">
-          </div>
-        </div>
-        <h2 id="countdownMilliseconds">-</h2>
-        <div class="progress">
-          <div class="progress-bar bg-green" id="countdownMillisecondsProg" role="progressbar" style="width: 0%; transition: 0s;">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="js/countdown.js"></script>
-    <script type="text/javascript">
-      setInterval(function(){ updateCountdown() }, 10);
-    </script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

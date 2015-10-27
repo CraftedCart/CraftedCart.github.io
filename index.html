@@ -22,16 +22,23 @@
   </head>
   <body>
 
-    <div class="replaceNavbar"></div>
-    <script src="js/insertNavbar.js"></script>
+    <div class="m-scene" id="main">
 
-    <div class="jumbotron home-jumbotron">
-      <div class="container">
-        <h1>CraftedCart's Home page of almost nothing!</h1>
+      <div class="replaceNavbar scene_element scene_element--fadeinright"></div>
+      <script src="js/insertNavbar.js"></script>
+
+      <div class="jumbotron home-jumbotron scene_element scene_element--fadeinup">
+        <div class="container">
+          <h1>CraftedCart's Home page of almost nothing!</h1>
+        </div>
       </div>
+
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.smoothState.js"></script>
+      <script src="js/transitionPage.js"></script>
+
     </div>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
